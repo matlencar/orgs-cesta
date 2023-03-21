@@ -6,16 +6,16 @@ import {
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
 
-const [fonteCarregada] = useFonts({
-  MontserratRegular: Montserrat_400Regular,
-  MontserratBold: Montserrat_700Bold,
-});
-
-if (!fonteCarregada) {
-   <View />;
-}
-
 export default function App() {
+  const [fonteCarregada] = useFonts({
+    MontserratRegular: Montserrat_400Regular,
+    MontserratBold: Montserrat_700Bold,
+  });
+
+  if (!fonteCarregada) {
+    return <View />;
+  }
+
   return (
     <SafeAreaView>
       <StatusBar />
